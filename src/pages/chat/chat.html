@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle color = "secondary">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Watson Application</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <p>
+    What would you like to ask Watson?
+
+  </p>
+  <p>{{fileOutput}}<p>
+
+  <ion-item id="foo" *ngFor="let answer of fileOutput"  style="height:100px">
+
+    <!-- <p>{{answer}}</p> -->
+
+  </ion-item>
+
+
+
+
+
+      <ion-item>
+    <ion-textarea placeholder="Enter a description" type="text" [(ngModel)]="userInput"></ion-textarea>
+  </ion-item>
+
+  <button ion-button (click)='loadConversation();' color="secondary">Submit Text</button>
+  <button ion-button menuToggle color="secondary">Toggle Menu</button>
+</ion-content>

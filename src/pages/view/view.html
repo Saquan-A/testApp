@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle color = "secondary">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>View</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-card>
+      <ion-card-header>
+        Doughnut Chart
+      </ion-card-header>
+      <ion-card-content>
+        <canvas #doughnutCanvas></canvas>
+      </ion-card-content>
+    </ion-card>
+<ion-content>
+  <h3>Items Avaliable</h3>
+
+  <div style="display: block">
+                <canvas baseChart height="350"
+                            [data]="doughnutChartData"
+                            [labels]="doughnutChartLabels"
+                            [chartType]="doughnutChartType"
+                            (chartHover)="chartHovered($event)"
+                            (chartClick)="chartClicked($event)"></canvas>
+              </div>
+
+</ion-content>
